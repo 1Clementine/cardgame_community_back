@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.douyuehan.doubao.mapper.BmsTopicMapper">
-    <resultMap id="topicVO" type="com.douyuehan.doubao.model.vo.PostVO">
+<mapper namespace="com.syh1.mapper.BmsTopicMapper">
+    <resultMap id="topicVO" type="com.syh1.model.vo.PostVO">
         <id column="id" property="id"/>
         <result column="title" property="title"/>
         <result column="user_id" property="userId"/>
@@ -40,7 +40,7 @@
         </if>
     </select>
 
-    <select id="selectRecommend" resultType="com.douyuehan.doubao.model.entity.BmsPost">
+    <select id="selectRecommend" resultType="com.syh1.model.entity.BmsPost">
         select *
         from bms_post t
         where t.id != #{id}
